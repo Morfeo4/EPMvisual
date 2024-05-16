@@ -1,0 +1,56 @@
+﻿@model EPMvisual.cliente
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estratoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estratoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.periodoConsumoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.periodoConsumoCliente)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

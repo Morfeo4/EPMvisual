@@ -1,0 +1,50 @@
+﻿@model EPMvisual.cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estratoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estratoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.periodoConsumoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.periodoConsumoCliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cedulaCliente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
